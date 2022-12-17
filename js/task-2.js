@@ -1,15 +1,17 @@
-const countProps = function(obj) {
-  const arr = Object.values(obj);
-  const total = arr.length;
+class User{
+  constructor(name,age,folowers){
+this.name = name;
+this.age = age;
+this.folowers = folowers;
+  }
 
-  return total;
-};
+  getInfo(){
+    console.log(`User ${this.name} is ${this.age} years old and has ${this.folowers} followers`)
+  }
+}
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
-console.log(countProps({})); // 0
+const mango = new User('Mango',2,20);
+mango.getInfo();
 
-console.log(countProps({ name: 'Mango', age: 2 })); // 2
-
-console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 })); // 3
+const polly = new User('Polly',23,2015);
+polly.getInfo();
